@@ -1,0 +1,23 @@
+{%extends "layout.html"%}
+{%block content%}
+
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+
+<div class="container d-flex mt-5">
+    <form method="POST" action="{{ url_for('pricing') }}">
+        <center>
+            <h2>Enter the product details </h2> <br>
+            Product Link <input type="text" name="prodlink" /> <br>
+            Email <input type="text" name="email" /> <br>
+            <input type="submit" value="Get Alerts">
+        </center>
+    </form>
+</div>
+
+{%endblock%}

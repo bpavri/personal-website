@@ -1,14 +1,12 @@
 -- CREATE DATABASE `flask-vue-mysql-docker`;
 -- USE `flask-vue-mysql-docker`;
 
-CREATE TABLE `quote` (
+CREATE TABLE `pricing` (
     `id` INT(11) PRIMARY KEY AUTO_INCREMENT,
-    `quote` VARCHAR(512) NOT NULL,
-    `quote_by` VARCHAR(100),
-    `added_by` VARCHAR(100),
+    `email` VARCHAR(512) NOT NULL,
+    `product_title` VARCHAR(512) NOT NULL,
+    `product_url` VARCHAR(512) NOT NULL,
+    `initial_price` DECIMAL(6,2) NOT NULL,
     `created` DATETIME DEFAULT CURRENT_TIMESTAMP(),
-    `updated` DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP()
+    `last_checked` DATETIME DEFAULT CURRENT_TIMESTAMP()
 );
-
-INSERT INTO `quote` (`quote`, `quote_by`, `added_by`)
-VALUES ('Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves.', 'Allan Kay', 'Sam');

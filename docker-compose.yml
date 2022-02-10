@@ -25,6 +25,7 @@ services:
   api:
     build: ./api
     container_name: api
+    command: uwsgi --ini wsgi-config.ini
     restart: always
     volumes:
       - ./api/:/app
