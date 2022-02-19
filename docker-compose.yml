@@ -10,6 +10,8 @@ services:
       - MYSQL_ROOT_PASSWORD=f2Bmk.!kp8hgvrzDw3UDC!Xj
       - MYSQL_DATABASE=flask-vue-mysql-docker
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 3306:3306
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -27,8 +29,8 @@ services:
     container_name: api
     command: uwsgi --ini wsgi-config.ini
     restart: always
-    volumes:
-      - ./api/:/app
+    # volumes:
+    #   - ./api/:/app
     depends_on:
       - db
     expose:
