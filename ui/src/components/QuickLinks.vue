@@ -10,11 +10,11 @@
       <li><a href="/projects" target="_blank" rel="noopener">Projects</a></li>
     </ul> -->
 
-    <img src="../assets/seattle.jpg" style="position: relative;
+    <!-- <img src="../assets/seattle.jpg" style="position: relative;
     left: 0;
     width: 100%;
     bottom: -8em;
-    height: auto" loading="lazy" />
+    height: auto" loading="lazy" /> -->
   </div>
 </template>
 
@@ -29,19 +29,19 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
+<style>
+.quick-links h3 {
   margin: 40px 0 0;
 }
-ul {
+.quick-links ul {
   list-style-type: none;
   padding: 0;
 }
-li {
+.quick-links li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
+.quick-links a {
   color: #42b983;
 }
 </style>
